@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """my_blog URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -24,4 +25,5 @@ urlpatterns = patterns('',
     url(r'^aboutme/$', 'article.views.about_me', name = 'about_me'),
     url(r'^tag/(?P<tag>\w+)/$', 'article.views.search_tag', name = 'search_tag'),
     url(r'^search/$','article.views.blog_search', name = 'search'),
+    url(r'^feed/$',  'article.views.RSSFeed', name = "RSS"),
 )

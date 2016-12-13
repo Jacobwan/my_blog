@@ -42,9 +42,15 @@
                         <a class="button-success pure-button" href="{% url 'about_me' %}">About Me</a>
                     </li>
                     <li>
+                    <!--在 form 标签中添加 .pure-form 类，可生成单行表单（inline）-->
+                    <!--必需的 action 属性规定当提交表单时，向何处发送表单数据-->
                     <form class="pure-form" action="/search/" method="get">
-                        <input class="pure-input-3-3" type="text" name="s" placeholder="search">
+                        <input class="pure-input-1" type="text" name="s" placeholder="search">
                     </form>
+                    </li>
+                    <!--RSS-->
+                    <li class="nav-item">
+                        <a class="button-success pure-button" href="/">RSS</a>  
                     </li>
                     </ul>
                 </nav>
