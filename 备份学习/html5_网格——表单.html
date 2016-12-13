@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面标题</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+    <!--
+    响应式网格 Responsive Grids
+    -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+</head>
+ 
+<body>
+    <!--
+    网页内容
+    -->
+    <!-- 网格 Grids
+    网格对象中包含两种样式类：网格类（pure-g）和单元格类（pure-u 或者 pure-u-*）
+    单元格的大小由类命指定， 如：pure-u-1-2 表示 50% 宽度， pure-u-1-5 表示 20% 宽度
+    -->
+    <!---->
+    <div class="pure-g">
+        <div class="pure-u-1-3"><p>Thirds</p></div>
+        <div class="pure-u-1-3"><p>Thirds</p></div>
+        <div class="pure-u-1-3"><p>Thirds</p></div>
+    </div>
+
+    <!---->
+    <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-3"> ... </div>
+        <div class="pure-u-1 pure-u-md-1-3"> ... </div>
+        <div class="pure-u-1 pure-u-md-1-3"> ... </div>
+    </div>
+
+    <!--在 form 标签中添加 .pure-form 类，可生成单行表单（inline）-->
+    <form class="pure-form">
+    <fieldset>
+        <legend>A compact inline form</legend>
+ 
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+ 
+        <label for="remember">
+            <input id="remember" type="checkbox"> Remember me
+        </label>
+        <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+    </fieldset>
+    </form>
+
+
+<!--在 form 标签中添加 .pure-form-stacked 类，可生成栈型表单-->
+    <form class="pure-form pure-form-stacked">
+    <fieldset>
+        <legend>A Stacked Form</legend>
+ 
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Email">
+ 
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Password">
+ 
+        <label for="state">State</label>
+        <select id="state">
+            <option>AL</option>
+            <option>CA</option>
+            <option>IL</option>
+        </select>
+ 
+        <label for="remember" class="pure-checkbox">
+            <input id="remember" type="checkbox"> Remember me
+        </label>
+ 
+        <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+    </fieldset>
+</form>
+
+<!--在 form 标签中添加 .pure-form-aligned 类，可生成排型表单-->
+<form class="pure-form pure-form-aligned">
+    <fieldset>
+        <div class="pure-control-group">
+            <label for="name">Username</label>
+            <input id="name" type="text" placeholder="Username">
+        </div>
+ 
+        <div class="pure-control-group">
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Password">
+        </div>
+ 
+        <div class="pure-control-group">
+            <label for="email">Email Address</label>
+            <input id="email" type="email" placeholder="Email Address">
+        </div>
+ 
+        <div class="pure-control-group">
+            <label for="foo">Supercalifragilistic Label</label>
+            <input id="foo" type="text" placeholder="Enter something here...">
+        </div>
+ 
+        <div class="pure-controls">
+            <label for="cb" class="pure-checkbox">
+                <input id="cb" type="checkbox"> I've read the terms and conditions
+            </label>
+ 
+            <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        </div>
+    </fieldset>
+</form>
+
+
+
+<!--通过与响应式网格（responsive-grids）结合，可生成多列表单-->
+<form class="pure-form pure-form-stacked">
+    <fieldset>
+        <legend>Legend</legend>
+ 
+        <div class="pure-g">
+            <div class="pure-u-1 pure-u-md-1-3">
+                <label for="first-name">First Name</label>
+                <input id="first-name" type="text">
+            </div>
+ 
+            <div class="pure-u-1 pure-u-md-1-3">
+                <label for="last-name">Last Name</label>
+                <input id="last-name" type="text">
+            </div>
+ 
+            <div class="pure-u-1 pure-u-md-1-3">
+                <label for="email">E-Mail</label>
+                <input id="email" type="email" required>
+            </div>
+ 
+            <div class="pure-u-1 pure-u-md-1-3">
+                <label for="city">City</label>
+                <input id="city" type="text">
+            </div>
+ 
+            <div class="pure-u-1 pure-u-md-1-3">
+                <label for="state">State</label>
+                <select id="state" class="pure-input-1-2">
+                    <option>AL</option>
+                    <option>CA</option>
+                    <option>IL</option>
+                </select>
+            </div>
+        </div>
+ 
+        <label for="terms" class="pure-checkbox">
+            <input id="terms" type="checkbox"> I've read the terms and conditions
+        </label>
+ 
+        <button type="submit" class="pure-button pure-button-primary">Submit</button>
+    </fieldset>
+</form>
+
+
+
+<!--通过对 fieldset 增加 .pure-group 类， 可对元素分组-->
+<form class="pure-form">
+    <fieldset class="pure-group">
+        <input type="text" class="pure-input-1-2" placeholder="Username">
+        <input type="text" class="pure-input-1-2" placeholder="Password">
+        <input type="email" class="pure-input-1-2" placeholder="Email">
+    </fieldset>
+ 
+    <fieldset class="pure-group">
+        <input type="text" class="pure-input-1-2" placeholder="Another Group">
+        <input type="text" class="pure-input-1-2" placeholder="More Stuff">
+    </fieldset>
+ 
+    <button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Sign in</button>
+</form>
+
+<!--复选框（checkbox）和单选框（radio），增加 .pure-checkbox 和 .pure-radio，保持其样式整齐-->
+<form class="pure-form">
+    <label for="option-one" class="pure-checkbox">
+        <input id="option-one" type="checkbox" value="">
+        Here's option one.
+    </label>
+ 
+    <label for="option-two" class="pure-radio">
+        <input id="option-two" type="radio" name="optionsRadios" value="option1" checked>
+        Here's a radio button. You can choose this one..
+    </label>
+ 
+    <label for="option-three" class="pure-radio">
+        <input id="option-three" type="radio" name="optionsRadios" value="option2">
+        ..Or this one!
+    </label>
+</form>
+
+
+
+
+
+
+
+
+</body>
+</html>

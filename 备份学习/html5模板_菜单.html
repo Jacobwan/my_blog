@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面标题</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+</head>
+ 
+<body>
+    <!--
+    水平菜单 Horizontal Menu
+增加类 .pure-menu-horizontal 创建水平菜单，通过增加类 .pure-menu-selected，使其处于选中状态
+    -->
+<div class="pure-menu pure-menu-open pure-menu-horizontal">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li class="pure-menu-selected"><a href="#">Flickr</a></li>
+        <li><a href="#">Messenger</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Finance</a></li>
+    </ul>
+</div>
+    <!--
+    带标题的菜单
+用 ul 包裹菜单内容，用 a 标签包裹菜单标题文字，并对其增加类 .pure-menu-heading
+    -->
+    <div class="pure-menu pure-menu-open pure-menu-horizontal">
+    <a href="#" class="pure-menu-heading">Site Title</a>
+ 
+    <ul>
+        <li class="pure-menu-selected"><a href="#">Home</a></li>
+        <li><a href="#">Flickr</a></li>
+        <li><a href="#">Messenger</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Finance</a></li>
+    </ul>
+</div>
+    <!--
+    纵向菜单
+只需要增加类 .pure-menu即可，增加 .pure-menu-open 可使其处于可见状态
+    -->
+    <div class="pure-menu pure-menu-open">
+    <a class="pure-menu-heading">Yahoo! Sites</a>
+ 
+    <ul>
+        <li><a href="#">Flickr</a></li>
+        <li><a href="#">Messenger</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Finance</a></li>
+        <li class="pure-menu-heading">More Sites!</li>
+        <li><a href="#">Games</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">OMG!</a></li>
+    </ul>
+</div>
+    <!--
+    下拉菜单
+此功能需要 Javascript 支持，如 YUI 的 Y.Menu
+    -->
+    <div id="demo-horizontal-menu">
+    <ul id="std-menu-items">
+        <li class="pure-menu-selected"><a href="#">Flickr</a></li>
+        <li><a href="#">Messenger</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Finance</a></li>
+        <li>
+            <a href="#">Other</a>
+            <ul>
+                <li class="pure-menu-heading">More from Yahoo!</li>
+                <li class="pure-menu-separator"></li>
+                <li><a href="#">Autos</a></li>
+                <li><a href="#">Flickr</a></li>
+                <li><a href="#">Answers</a></li>
+                <li>
+                    <a href="#">Even More</a>
+                    <ul>
+                        <li><a href="#">Horoscopes</a></li>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">OMG</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<script>
+YUI({
+    classNamePrefix: 'pure'
+}).use('gallery-sm-menu', function (Y) {
+ 
+    var horizontalMenu = new Y.Menu({
+        container         : '#demo-horizontal-menu',
+        sourceNode        : '#std-menu-items',
+        orientation       : 'horizontal',
+        hideOnOutsideClick: false,
+        hideOnClick       : false
+    });
+ 
+    horizontalMenu.render();
+    horizontalMenu.show();
+ 
+});
+</script>
+    <!--
+   菜单中的禁用项
+添加类 .pure-menu-disabled
+    -->
+    <div class="pure-menu pure-menu-open pure-menu-horizontal">
+    <a href="#" class="pure-menu-heading">Site Title</a>
+ 
+    <ul>
+        <li class="pure-menu-selected"><a href="#">Home</a></li>
+        <li><a href="#">Flickr</a></li>
+        <li class="pure-menu-disabled"><a href="#">Disabled Item</a></li>
+    </ul>
+</div>
+    <!--
+    页码
+增加类 .pure-paginator 到 UL 标签中，为了使其具有按钮效果，可增加 .pure-button 类
+    -->
+    <ul class="pure-paginator">
+    <li><a class="pure-button prev" href="#">&#171;</a></li>
+    <li><a class="pure-button" href="#">1</a></li>
+    <li><a class="pure-button pure-button-active" href="#">2</a></li>
+    <li><a class="pure-button" href="#">3</a></li>
+    <li><a class="pure-button" href="#">4</a></li>
+    <li><a class="pure-button" href="#">5</a></li>
+    <li><a class="pure-button next" href="#">&#187;</a></li>
+</ul>
+    <!--
+    网页内容
+    -->
+    <!--
+    网页内容
+    -->
+
+
+
+
+
+
+
+</body>
+</html>
