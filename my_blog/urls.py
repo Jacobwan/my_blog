@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from blog  import views
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
+    url(r'', include('blog.urls', namespace='blog', app_name='blog')),
     url(r'^$',  'article.views.home',  name='home'),
     url(r'^(?P<id>\d+)/$', 'article.views.detail', name='detail'),
     url(r'^test/$', 'article.views.test'),
@@ -27,3 +29,13 @@ urlpatterns = patterns('',
     url(r'^search/$','article.views.blog_search', name = 'search'),
     url(r'^feed/$',  'article.views.RSSFeed', name = "RSS"),
 )
+
+"""
+    url(r'^blog', views.IndexView.as_view(), name='index'),
+    url(r'^article/(?P<article2_id>\d+)$', views.ArticleDetailView.as_view(), name='detail'),
+    url(r'^category/(?P<cate_id>\d+)$', views.CategoryView.as_view(), name='category'),
+
+
+
+    url(r'^blog/', include('blog.urls')),
+"""
